@@ -1,0 +1,29 @@
+Brad - Intro and Driver
+Greg - Anonymous user
+Steve - Registered user
+Steven - Admin
+John - Brewer
+
+
+Order of Events:
+1. Demonstrate Home Page -> BreweriesList -> BeersList -> Attempt Review (anonymous user interface)
+2. Register new user DannyDevito and log in. (register and login)
+3. Place Review on a beer -> add reply to another beer -> favorite a brewery (user interface)
+4. Request to become a brewer and add a brewery.(request Brewer/Brewery)
+5. Login as Admin -> admin tool suite preview -> approve/deny requests -> Approve DannyDevito and his petition to create Paddy's Pub (Admin interface)
+6. Login as DannyDevito again -> Go to Brewer Tools (Brewer Interface)
+7. Create a beer -> edit beer -> create an event -> edit event -> show Brewery page with new changes (Brewer Interface part 2)
+8. Delete beer -> delete event (brewer interface part 3)
+9. Login as Admin -> delete DannyDevito -> delete Paddy's Pub (admin interface part 2)
+
+Am I missing anything?
+
+
+Emit Solution for re-rendering components:
+
+ this.$emit('finished');
+ :key='RenderKey' v-on:finished='finished()'
+ RenderKey : 0
+   finished(){
+      this.RenderKey += 1;
+    }
